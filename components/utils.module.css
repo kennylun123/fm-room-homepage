@@ -1,0 +1,35 @@
+/* ------------- Composition -------------- */
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+}
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+/* ------------- Utility ------------------ */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.fs400 {
+  font-size: var(--fs-400);
+}
+.fs900 {
+  font-size: var(--fs-900);
+}
+
+.fw600 {
+  font-weight: 600;
+}
+.fw700 {
+  font-weight: 700;
+}

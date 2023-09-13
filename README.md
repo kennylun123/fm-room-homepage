@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Room homepage solution
 
-## Getting Started
+This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate the slider using either their mouse/trackpad or keyboard
+
+### Screenshot
+
+<p>Desktop version</p>
+<img src="screenshot/room-homepage-desktop.png" width="100%" alt="desktop-version" />
+<p>Tablet version</p>
+<img src="screenshot/room-homepage-tablet.png" width="880px" alt="tablet-version" />
+<p>Mobile version</p>
+<img src="screenshot/room-homepage-mobile.png" width="375px" alt="mobile-version" />
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- CSS Modules
+- CUBE CSS
+
+### What I learned
+
+- `srcset` and `sizes` properties of `<img>` element. I've only used `srcset` in my project.
+
+```HTML
+<img
+  key={index}
+  className={styles.slides}
+  src={slide.img.src}
+  srcSet={`${slide.img.src}, ${slide.imgMobile.src} 376w`}
+  alt={`slide image ${index}`}
+/>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Enforcement learning of image sizing and positioning with slider and slide control. Refer to "slider.js" & "slider.module.css".
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- For eaiser sizing control of `<svg>` element, I used `viewBox` attribute and set its width and height in CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```html
+<svg viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fillRule="evenodd" />
+</svg>
+```
 
-## Learn More
+### Useful resources
 
-To learn more about Next.js, take a look at the following resources:
+- [Responsive images by MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - Example of applying `srcset`, `sizes` and `<picture>`
+- [viewBox attribute of svg element](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website - [Kenny Ng](https://github.com/kennylun123?tab=repositories)
+- Frontend Mentor - [@kennylun123](https://www.frontendmentor.io/profile/kennylun123)
+- Twitter - [@kenny_ng123](https://www.twitter.com/kenny_ng123)

@@ -1,0 +1,149 @@
+.carouselWrapper {
+  --grid-gap: 0;
+  grid-template-areas: "slider-imgs" "slider-text";
+}
+
+#slider {
+  grid-area: slider-imgs;
+  position: relative;
+}
+
+.sliderContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  max-height: 65vh;
+}
+
+.imgWrapper {
+  --flex-gap: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease;
+}
+
+.slides {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideControl {
+  position: absolute;
+  --flex-gap: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.btnPrevSlide,
+.btnNextSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--clr-neutral-900));
+  border: none;
+  padding: 0;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.btnPrevSlide:hover,
+.btnNextSlide:hover {
+  background-color: hsl(var(--clr-neutral-500));
+}
+
+.btnPrevSlide > svg,
+.btnNextSlide > svg {
+  width: 10px;
+}
+
+#sliderText {
+  grid-area: slider-text;
+  padding: 4rem 2rem;
+}
+
+#sliderText > h1 {
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+}
+
+#sliderText > p {
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+  margin-bottom: 2rem;
+}
+
+#sliderText > .shopLink {
+  --flex-gap: 1.5rem;
+  width: fit-content;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 12px;
+  align-items: center;
+  transition: all 200ms ease;
+}
+
+.shopLink > svg {
+  margin-bottom: 4px;
+  transition: all 200ms ease;
+}
+
+.shopLink:hover {
+  color: hsl(var(--clr-neutral-400));
+}
+
+.shopLink:hover > svg {
+  fill: hsl(var(--clr-neutral-400));
+}
+
+@media (min-width: 1024px) {
+  .carouselWrapper {
+    grid-template-areas: "slider-imgs slider-text";
+    grid-template-columns: auto 40vw;
+  }
+
+  #sliderText {
+    padding: 5.5rem 4.25rem;
+  }
+
+  .sliderContainer {
+    max-height: none;
+  }
+
+  .slideControl {
+    right: -110px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #sliderText {
+    padding: 7.5rem 6.25rem;
+  }
+
+  #sliderText > h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  #sliderText > p {
+    margin-bottom: 1.25rem;
+  }
+
+  .slideControl {
+    right: -160px;
+  }
+
+  .btnPrevSlide,
+  .btnNextSlide {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btnPrevSlide > svg,
+  .btnNextSlide > svg {
+    width: 15px;
+  }
+}

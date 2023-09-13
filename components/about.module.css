@@ -1,0 +1,65 @@
+.aboutWrapper {
+  --grid-gap: 0;
+  grid-template-areas: "about-img-dark" "about-text" "about-img-light";
+}
+
+#aboutImgDark {
+  grid-area: about-img-dark;
+}
+
+#aboutImgDark > img,
+#aboutImgLight > img {
+  width: 100%;
+  height: 100%;
+  max-height: 65vh;
+  object-fit: cover;
+}
+
+#aboutText {
+  grid-area: about-text;
+  padding: 3rem 2rem;
+}
+
+#aboutText > h2 {
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+}
+
+#aboutText > p {
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+#aboutImgLight {
+  grid-area: about-img-light;
+}
+
+@media (min-width: 1024px) {
+  .aboutWrapper {
+    grid-template-areas: "about-img-dark about-text about-img-light";
+    grid-template-columns: calc(40vw - 110px) auto calc(40vw - 110px);
+  }
+
+  #aboutText {
+    grid-area: about-text;
+    padding: 3.5rem 2.5rem;
+  }
+
+  #aboutImgDark > img,
+  #aboutImgLight > img {
+    max-height: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .aboutWrapper {
+    grid-template-columns: calc(40vw - 160px) auto calc(40vw - 160px);
+  }
+
+  #aboutText {
+    grid-area: about-text;
+    padding: 4rem 3rem;
+  }
+}
