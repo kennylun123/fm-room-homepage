@@ -31,6 +31,7 @@ export default function Header() {
           className={`${styles.topNavMobileMain} ${utils.flex} ${
             toggleMenu ? styles.topNavMobileMainActive : ""
           } `}
+          aria-label="topNav"
         >
           <ul className={`${styles.navMobileLinks} ${utils.flex}`} role="list">
             <li className={styles.navMobileLink}>
