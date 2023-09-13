@@ -27,7 +27,8 @@ export default function Header() {
         ></div>
 
         <nav
-          className={`${styles.topNavMobileMain} ${utils.flex}  ${
+          id="topNav"
+          className={`${styles.topNavMobileMain} ${utils.flex} ${
             toggleMenu ? styles.topNavMobileMainActive : ""
           } `}
         >

@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-roomhomepage-using-nextjs-css-grid-flexbox-VHUhIoqugT](https://www.frontendmentor.io/solutions/responsive-roomhomepage-using-nextjs-css-grid-flexbox-VHUhIoqugT)
+- Live Site URL: [https://fm-room-homepage-kennylun123.vercel.app/](https://fm-room-homepage-kennylun123.vercel.app/)
 
 ## My process
 

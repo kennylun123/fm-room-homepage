@@ -36,7 +36,11 @@ export default function Slider({ slides }) {
         </div>
 
         <div className={`${styles.slideControl} ${utils.flex}`}>
-          <button className={styles.btnPrevSlide} onClick={handleToPrevSlide}>
+          <button
+            className={styles.btnPrevSlide}
+            onClick={handleToPrevSlide}
+            aria-label="Previous slide"
+          >
             <svg viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M13 0L1 12l12 12"
@@ -46,7 +50,11 @@ export default function Slider({ slides }) {
               />
             </svg>
           </button>
-          <button className={styles.btnNextSlide} onClick={handleToNextSlide}>
+          <button
+            className={styles.btnNextSlide}
+            onClick={handleToNextSlide}
+            aria-label="Next slide"
+          >
             <svg viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M1 0l12 12L1 24"
